@@ -16,7 +16,7 @@ function App() {
       const response = await axios.get('https://api.thecatapi.com/v1/images/search', {
         params: { limit: 10, page },
         headers: {
-          'x-api-key': 'live_lTgYhkq1qPCI0etkSFXE9LU1e3gQfh98mvj1u3ZbkUq3juIoDSKB89W7dQYJQgDO', // Замените на ваш API ключ
+          'x-api-key': 'live_lTgYhkq1qPCI0etkSFXE9LU1e3gQfh98mvj1u3ZbkUq3juIoDSKB89W7dQYJQgDO', 
         },
       });
       setCats((prevCats) => [...prevCats, ...response.data]);
@@ -54,7 +54,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/frontend-challenge">
       <nav className="navigation">
         <Link to="/" className="nav-link">
           Все котики
